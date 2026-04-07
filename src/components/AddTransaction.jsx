@@ -43,7 +43,7 @@ export function AddTransaction({ onAdd }) {
           type="number"
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
-          placeholder="0.00"
+          placeholder="00.00"
         />
       </div>
 
