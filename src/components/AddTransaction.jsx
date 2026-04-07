@@ -43,8 +43,8 @@ export function AddTransaction({ onAdd }) {
           type="number"
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
-          // Blocks the letter 'e', which browsers allow by default in number inputs for scientific notation (e.g. 1e5)
-          onKeyDown={(e) => e.key === 'e' && e.preventDefault()}
+          // Blocks 'e' and 'E', which browsers allow by default in number inputs for scientific notation (e.g. 1e5)
+          onKeyDown={(e) => (e.key === 'e' || e.key === 'E') && e.preventDefault()}
           placeholder="00.00"
         />
       </div>
