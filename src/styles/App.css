@@ -115,6 +115,16 @@ main {
   color: var(--red) !important;
 }
 
+/* Remove number input arrows */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 /* FORM */
 .form {
   background: linear-gradient(180deg, #1f2126 0%, #1a1b1f 100%);

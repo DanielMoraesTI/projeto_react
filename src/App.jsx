@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import {initialTransactions} from './mockData';
 import {AddTransaction} from './components/AddTransaction';
 import {Summary} from './components/Summary';
-import {TransactionItem} from './components/TransactionItem';
 import {TransactionList} from './components/TransactionList';
 
 import './styles/App.css'
