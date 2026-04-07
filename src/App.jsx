@@ -5,7 +5,7 @@ import {Summary} from './components/Summary';
 import {TransactionItem} from './components/TransactionItem';
 import {TransactionList} from './components/TransactionList';
 
-import './App.css'
+import './styles/App.css'
 
 
 function App() {
