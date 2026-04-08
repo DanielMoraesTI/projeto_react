@@ -3,8 +3,8 @@ import {initialTransactions} from './mockData';
 import {AddTransaction} from './components/AddTransaction';
 import {Summary} from './components/Summary';
 import {TransactionList} from './components/TransactionList';
-
 import './styles/App.css'
+import { Routes, Route } from 'react-router'
 
 
 function App() {
