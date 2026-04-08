@@ -49,6 +49,10 @@ function App() {
         <AddTransaction onAdd={handleAdd} />
         <TransactionList transactions={transactions} onDelete={handleDelete} />
       </main>
+
+      <footer className="app-footer">
+        @2026 Porjeto React Grupo Pangéia
+      </footer>
     </div>
   )
 }

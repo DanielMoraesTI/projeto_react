@@ -1,16 +1,45 @@
-# React + Vite
+# Projeto React - Modulo 6 (UpSkill)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto desenvolvido pelo Grupo Pangeia durante o Modulo 6 da UpSkill, com foco em praticar React, componentizacao, estado global e organizacao de front-end moderno.
 
-Currently, two official plugins are available:
+## Objetivo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Criar uma aplicacao React funcional e bem estruturada para consolidar os conceitos estudados no modulo.
 
-## React Compiler
+## Tecnologias
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- JavaScript (ES6+)
+- CSS
 
-## Expanding the ESLint configuration
+## Como executar
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Instale as dependencias:
+
+```bash
+npm install
+```
+
+2. Inicie o projeto em modo de desenvolvimento:
+
+```bash
+npm run dev
+```
+
+3. Acesse no navegador o endereco exibido no terminal (geralmente `http://localhost:5173`).
+
+## Estrutura principal
+
+- `src/components`: componentes reutilizaveis
+- `src/pages`: paginas da aplicacao
+- `src/contexts` e `src/store`: gerenciamento de estado
+- `src/services`: regras de acesso a dados e servicos
+- `src/styles`: estilos globais e locais
+
+## Time
+
+Grupo Pangeia - estudantes da UpSkill.
+
+---
+@2026 Porjeto React Grupo Pangéia

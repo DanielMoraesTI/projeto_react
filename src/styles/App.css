@@ -33,6 +33,15 @@ body {
   margin: 0 auto;
 }
 
+.app-footer {
+  margin-top: 36px;
+  padding: 16px 12px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--line);
+}
+
 header {
   text-align: center;
   color: var(--text-main);
@@ -312,5 +321,10 @@ input[type="number"] {
     width: 100%;
     margin-top: 10px;
     justify-content: space-between;
+  }
+
+  .app-footer {
+    margin-top: 28px;
+    font-size: 0.82rem;
   }
 }
