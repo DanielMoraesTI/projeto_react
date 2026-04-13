@@ -3,6 +3,7 @@ import {AddTransaction} from './components/AddTransaction';
 import {Summary} from './components/Summary';
 import {TransactionList} from './components/TransactionList';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import './styles/App.css'
 import data from './expense-api/data/transactions.json'
 
