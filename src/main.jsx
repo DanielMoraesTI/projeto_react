@@ -14,11 +14,13 @@ createRoot(document.getElementById('root')).render(
     <QueryClientProvider client={new QueryClient()}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<App />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/add-transaction" element={<AddTransaction />} />
-          <Route path="/history" element={<History />} />
-          <Route path="/settings" element={<Settings />} />
+          <Route element={<MainLayout />}>
+            <Route path="/" element={<App />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/add-transaction" element={<AddTransaction />} />
+            <Route path="/history" element={<History />} />
+            <Route path="/settings" element={<Settings />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>
