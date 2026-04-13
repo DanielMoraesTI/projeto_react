@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import {AddTransaction} from './components/AddTransaction';
 import {Summary} from './components/Summary';
 import {TransactionList} from './components/TransactionList';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import './styles/App.css'
 import data from './expense-api/data/transactions.json'
 
@@ -52,6 +53,7 @@ function App() {
       <footer className="app-footer">
         &#169; 2026 Grupo Pangéia. Projeto React M6. 
       </footer>
+      <ReactQueryDevtools initialIsOpen={false} />
     </div>
   )
 }
