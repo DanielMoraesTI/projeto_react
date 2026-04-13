@@ -56,3 +56,5 @@ function App() {
 }
 
 export default App;
+
+// O componente App é o componente principal da aplicação de gestão financeira. Ele gerencia o estado das transações financeiras usando o hook useState, onde as transações iniciais são carregadas a partir de um arquivo JSON. O componente calcula o total de receitas, despesas e saldo com base nas transações atuais. Ele também define funções para adicionar novas transações e deletar transações existentes, que são passadas como props para os componentes filhos. O App renderiza um resumo financeiro, um formulário para adicionar novas transações e uma lista de transações, além de incluir as ferramentas de desenvolvimento do React Query para facilitar a depuração.  
