@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react';
-import {initialTransactions} from './mockData';
 import {AddTransaction} from './components/AddTransaction';
 import {Summary} from './components/Summary';
 import {TransactionList} from './components/TransactionList';
 import './styles/App.css'
-import { Routes, Route } from 'react-router'
+import data from './expense-api/data/transactions.json'
 
 
 function App() {
-  const [transactions, setTransactions] = useState(initialTransactions);
+  const [transactions, setTransactions] = useState(data.transactions);
 
   // Calcular valores tanto soma de receitas, despesas e saldo
   const income = transactions
