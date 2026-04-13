@@ -51,7 +51,7 @@ function App() {
       </main>
 
       <footer className="app-footer">
-        @2026 Porjeto React Grupo Pangéia
+        &#169; 2026 Grupo Pangéia. Projeto React M6. 
       </footer>
     </div>
   )
