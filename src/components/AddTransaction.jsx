@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 // O componente AddTransaction é responsável por renderizar um formulário para adicionar novas transações financeiras. Ele utiliza o hook useState para gerenciar os estados locais dos campos de descrição, valor e tipo da transação. O formulário inclui campos de entrada para a descrição e valor, bem como um seletor para escolher entre receita e despesa. Quando o formulário é submetido, a função handleSubmit é chamada, que valida os campos, chama a função onAdd passada como prop para adicionar a nova transação à lista de transações no componente pai (App), e então limpa os campos do formulário para permitir a adição de novas transações.
-export function AddTransaction({ onAdd }) {
+function AddTransaction({ onAdd }) {
   const [description, setDescription] = useState("");
   const [amount, setAmount] = useState("");
   const [type, setType] = useState("expense");
@@ -61,3 +61,5 @@ export function AddTransaction({ onAdd }) {
     </form>
   );
 }
+
+export default AddTransaction;

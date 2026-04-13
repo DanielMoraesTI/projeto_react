@@ -1,12 +1,11 @@
-import { useState, useEffect } from 'react';
-import {AddTransaction} from './components/AddTransaction';
-import {Summary} from './components/Summary';
-import {TransactionList} from './components/TransactionList';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import './styles/App.css'
-import data from './expense-api/data/transactions.json'
+import { useState } from "react";
+import AddTransaction from "./components/AddTransaction";
+import { Summary } from "./components/Summary";
+import { TransactionList } from "./components/TransactionList";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
+import "./styles/App.css";
+import data from "./expense-api/data/transactions.json";
 
 function App() {
   const [transactions, setTransactions] = useState(data.transactions);
@@ -52,11 +51,11 @@ function App() {
       </main>
 
       <footer className="app-footer">
-        &#169; 2026 Grupo Pangéia. Projeto React M6. 
+        &#169; 2026 Grupo Pangéia. Projeto React M6.
       </footer>
       <ReactQueryDevtools initialIsOpen={false} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
