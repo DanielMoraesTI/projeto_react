@@ -14,10 +14,12 @@ function AddTransaction({ onAdd }) {
       return;
     }
 
+    const numericAmount = Math.abs(parseFloat(amount));
+    const signedAmount = type === "expense" ? -numericAmount : numericAmount;
+
     onAdd({
       description: description.trim(),
-      amount: parseFloat(amount),
-      type: type,
+      amount: signedAmount,
     });
 
     setDescription("");
@@ -44,7 +46,9 @@ function AddTransaction({ onAdd }) {
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
           // Blocks 'e' and 'E', which browsers allow by default in number inputs for scientific notation (e.g. 1e5)
-          onKeyDown={(e) => (e.key === 'e' || e.key === 'E') && e.preventDefault()}
+          onKeyDown={(e) =>
+            (e.key === "e" || e.key === "E") && e.preventDefault()
+          }
           placeholder="00.00"
         />
       </div>

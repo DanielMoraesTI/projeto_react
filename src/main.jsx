@@ -8,6 +8,7 @@ import Dashboard from "./pages/Dashboard.jsx";
 import AddTransaction from "./pages/AddTransaction.jsx";
 import History from "./pages/History.jsx";
 import Settings from "./pages/Settings.jsx";
+import "./styles/App.css";
 
 const queryClient = new QueryClient();
 

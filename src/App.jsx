@@ -12,22 +12,21 @@ function App() {
 
   // Calcular valores tanto soma de receitas, despesas e saldo
   const income = transactions
-    .filter((t) => t.type === "income")
+    .filter((t) => t.amount > 0)
     .reduce((sum, t) => sum + t.amount, 0);
 
   const expense = transactions
-    .filter((t) => t.type === "expense")
-    .reduce((sum, t) => sum + t.amount, 0);
+    .filter((t) => t.amount < 0)
+    .reduce((sum, t) => sum + Math.abs(t.amount), 0);
 
   const balance = income - expense;
 
   // Adicionar transação onde é gerado um ID único, a data atual e os dados da transação vinda do formulário de adição de transação. A nova transação é adicionada no início da lista de transações para que apareça primeiro.
-  const handleAdd = ({ description, amount, type }) => {
+  const handleAdd = ({ description, amount }) => {
     const newTransaction = {
       id: Math.max(...transactions.map((t) => t.id), 0) + 1,
       description,
       amount,
-      type,
       date: new Date().toISOString().split("T")[0],
     };
     setTransactions([newTransaction, ...transactions]);
@@ -50,9 +49,7 @@ function App() {
         <TransactionList transactions={transactions} onDelete={handleDelete} />
       </main>
 
-      <footer className="app-footer">
-        &#169; 2026 Grupo Pangéia. Projeto React M6.
-      </footer>
+
       <ReactQueryDevtools initialIsOpen={false} />
     </div>
   );
