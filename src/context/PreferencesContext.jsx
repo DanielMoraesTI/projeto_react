@@ -1,0 +1,1 @@
+//moeda preferida, nome do utilizador
