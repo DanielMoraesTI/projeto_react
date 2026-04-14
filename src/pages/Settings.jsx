@@ -31,16 +31,18 @@ function Settings() {
             ))}
           </select>
           <h2>Tema</h2>
-          <span>☀️</span>
-          <label className="toggle-switch">
-            <input
-              type="checkbox"
-              checked={theme === "escuro"}
-              onChange={toggleTheme}
-            />
-            <span className="toggle-slider" />
-          </label>
-          <span>🌙</span>
+          <div className="toggle-wrapper">
+            <span>☀️</span>
+            <label className="toggle-switch">
+              <input
+                type="checkbox"
+                checked={theme === "escuro"}
+                onChange={toggleTheme}
+              />
+              <span className="toggle-slider" />
+            </label>
+            <span>🌙</span>
+          </div>
         </div>
       </main>
     </section>
