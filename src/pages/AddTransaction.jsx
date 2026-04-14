@@ -110,7 +110,7 @@ export default function AddTransaction() {
           </div>
 
           <div className="form-group">
-            <label htmlFor="amount">Valor (€) *</label>
+            <label htmlFor="amount">Valor *</label>
             <input
               id="amount"
               type="number"

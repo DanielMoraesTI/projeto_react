@@ -1,16 +1,16 @@
-function CategoryFilter({ categories, activeCategory, onCategoryChange }) {
-  const apiUrl = "http://localhost:3001";
+import { API_URL } from "../api";
 
+function CategoryFilter({ categories, activeCategory, onCategoryChange }) {
   const getIconSrc = (cat) => {
     if (cat.iconUrl?.startsWith("http")) {
       return cat.iconUrl;
     }
 
     if (cat.iconUrl?.startsWith("/")) {
-      return `${apiUrl}${cat.iconUrl}`;
+      return `${API_URL}${cat.iconUrl}`;
     }
 
-    return `${apiUrl}/api/categories/${cat.slug}/icon`;
+    return `${API_URL}/api/categories/${cat.slug}/icon`;
   };
 
   return (
