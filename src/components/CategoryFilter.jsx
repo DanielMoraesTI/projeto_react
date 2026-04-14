@@ -1,6 +1,7 @@
-import { API_URL } from "../api";
-
 function CategoryFilter({ categories, activeCategory, onCategoryChange }) {
+
+  const API_URL = 'http://localhost:3001';
+  
   const getIconSrc = (cat) => {
     if (cat.iconUrl?.startsWith("http")) {
       return cat.iconUrl;
