@@ -31,6 +31,7 @@ function Settings() {
             ))}
           </select>
           <h2>Tema</h2>
+          <span>☀️</span>
           <label className="toggle-switch">
             <input
               type="checkbox"
@@ -39,6 +40,7 @@ function Settings() {
             />
             <span className="toggle-slider" />
           </label>
+          <span>🌙</span>
         </div>
       </main>
     </section>

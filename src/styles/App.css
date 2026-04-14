@@ -600,6 +600,13 @@ input[type="number"] {
   transform: translateX(24px);  /* slides the circle right */
 }
 
+.toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
 /* RESPONSIVO */
 @media (max-width: 600px) {
   .navbar {
