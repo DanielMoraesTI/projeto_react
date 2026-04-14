@@ -1,8 +1,14 @@
 //NavBar + <Outlet />
 import { Outlet, Link } from 'react-router'
+import { useContext } from 'react'
 import Navbar from '../components/Navbar'
+import { ThemeContext } from '../context/ThemeContext'
+
+
 
 const MainLayout = () => {
+    const { theme, toggleTheme } = useContext(ThemeContext);
+
     return (
         <div>
             <Navbar>
@@ -11,6 +17,9 @@ const MainLayout = () => {
                 <Link to="/add-transaction">Adicionar Transação</Link>
                 <Link to="/history">Histórico</Link>
                 <Link to="/settings">Configurações</Link>
+                <button onClick={toggleTheme}>
+                    {theme === 'dark' ? '☀️' : '🌙'}
+                </button>
             </Navbar>
             <main>
                 <Outlet />
