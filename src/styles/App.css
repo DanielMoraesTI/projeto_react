@@ -33,6 +33,36 @@ body {
   margin: 0 auto;
 }
 
+body.claro {
+  background: #f9fafb;
+  color: #111827;
+}
+
+body.escuro {
+  background: #111214;
+  color: #f2f2f3;
+}
+
+body.escuro h1,
+body.escuro h2,
+body.escuro h3 {
+  color: #f2f2f3;
+}
+
+body.claro h1,
+body.claro h2,
+body.claro h3 {
+  color: #111827;
+}
+
+body.claro .card{
+  background:#9c9c9c91 ;
+}
+
+body.claro .navbar{
+  background:#9c9c9c91 ;
+}
+
 .app-footer {
   margin-top: 36px;
   padding: 16px 12px;

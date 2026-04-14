@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { PreferencesContext } from "../context/PreferencesContext";
+import { ThemeContext } from "../context/ThemeContext";
 
 const CURRENCIES = [
   { code: "EUR", label: "Euro (€)" },
@@ -9,6 +10,7 @@ const CURRENCIES = [
 
 function Settings() {
   const { currency, setCurrency } = useContext(PreferencesContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
     <section className="app">
@@ -25,6 +27,10 @@ function Settings() {
               </option>
             ))}
           </select>
+          <h2>Tema</h2>
+        <button onClick={() => toggleTheme(theme === 'claro' ? 'escuro' : 'claro')}>
+          Mudar para {theme === 'claro' ? '🌙 Escuro' : '☀️ Claro'}
+        </button>
         </div>
       </main>
     </section>
