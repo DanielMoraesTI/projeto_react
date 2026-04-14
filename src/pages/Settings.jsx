@@ -20,7 +20,10 @@ function Settings() {
       <main>
         <div className="card">
           <h2>Moeda preferida</h2>
-          <select value={currency} onChange={(e) => setCurrency(e.target.value)}>
+          <select
+            value={currency}
+            onChange={(e) => setCurrency(e.target.value)}
+          >
             {CURRENCIES.map((c) => (
               <option key={c.code} value={c.code}>
                 {c.label}
@@ -28,9 +31,14 @@ function Settings() {
             ))}
           </select>
           <h2>Tema</h2>
-        <button onClick={() => toggleTheme(theme === 'claro' ? 'escuro' : 'claro')}>
-          Mudar para {theme === 'claro' ? '🌙 Escuro' : '☀️ Claro'}
-        </button>
+          <label className="toggle-switch">
+            <input
+              type="checkbox"
+              checked={theme === "escuro"}
+              onChange={toggleTheme}
+            />
+            <span className="toggle-slider" />
+          </label>
         </div>
       </main>
     </section>
