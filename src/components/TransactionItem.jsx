@@ -19,7 +19,7 @@ export function TransactionItem({ transaction, onDelete }) {
           className="delete-btn"
           onClick={() => onDelete(transaction.id)}
         >
-          ×
+          &times;
         </button>
       </div>
     </div>
