@@ -355,6 +355,17 @@ input[type="number"] {
     0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
+.error-message {
+  background: var(--red-soft);
+  border: 1px solid var(--red);
+  border-left: 4px solid var(--red);
+  color: #ff9999;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
 .form-group {
   margin-bottom: 20px;
   display: flex;

@@ -125,6 +125,18 @@ const categories = [
     </svg>`,
   },
   {
+    slug: "salario",
+    label: "Salário",
+    labelEn: "Salary",
+    color: "#10B981",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M12 6v12"/>
+      <path d="M9 9h6"/>
+      <path d="M9 15h6"/>
+    </svg>`,
+  },
+  {
     slug: "outro",
     label: "Outro",
     labelEn: "Other",
