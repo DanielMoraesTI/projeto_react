@@ -18,7 +18,7 @@ const Navbar = () => {
 
   const navItems = [
     {
-      to: "/dashboard",
+      to: "/",
       label: "Dashboard",
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
