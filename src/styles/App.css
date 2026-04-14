@@ -199,6 +199,9 @@ main {
 }
 
 .category-filter button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   border: 1px solid #3a3d45;
   background: #242730;
   color: var(--text-muted);
@@ -208,6 +211,13 @@ main {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
+}
+
+.category-filter-icon {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  display: inline-block;
 }
 
 .category-filter button:hover {
