@@ -8,24 +8,6 @@
       "type": "expense",
       "date": "2026-04-08",
       "createdAt": "2026-04-08T22:14:52.352Z"
-    },
-    {
-      "id": "486e697f-9793-4de8-af0f-937c8d74e2c1",
-      "description": "adssad",
-      "amount": -1000,
-      "category": "alimentacao",
-      "type": "expense",
-      "date": "2026-04-15",
-      "createdAt": "2026-04-15T15:18:42.304Z"
-    },
-    {
-      "id": "6460678c-8fa2-495c-9567-f070f29b81e1",
-      "description": "teasd",
-      "amount": 2000,
-      "category": "alimentacao",
-      "type": "income",
-      "date": "2026-04-15",
-      "createdAt": "2026-04-15T15:30:09.791Z"
     }
   ]
 }
