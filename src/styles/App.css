@@ -78,6 +78,42 @@ body.claro .navbar a.active {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
+/* Settings select - dark mode */
+.settings-select {
+  appearance: none;
+  padding: 12px 36px 12px 12px;
+  border: 1px solid #3a3d45;
+  background: var(--bg-panel-soft);
+  color: var(--text-main);
+  border-radius: 8px;
+  font-size: 1rem;
+  width: fit-content;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23a3a6ad' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.settings-select:focus {
+  outline: none;
+  border-color: #5a5f6b;
+  box-shadow: 0 0 0 4px rgba(90, 95, 107, 0.25);
+}
+
+/* Settings select - light mode */
+body.claro .settings-select {
+  background-color: #f9fafb;
+  border-color: #d1d5db;
+  color: #111827;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+}
+
+body.claro .settings-select:focus {
+  border-color: #9ca3af;
+  box-shadow: 0 0 0 4px rgba(156, 163, 175, 0.25);
+}
+
 body.claro .form,
 body.claro .transaction-list,
 body.claro .date-range-picker,

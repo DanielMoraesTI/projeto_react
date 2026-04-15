@@ -21,6 +21,7 @@ function Settings() {
         <div className="card">
           <h2>Moeda preferida</h2>
           <select
+            className="settings-select"
             value={currency}
             onChange={(e) => setCurrency(e.target.value)}
           >
