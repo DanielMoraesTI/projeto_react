@@ -3,10 +3,12 @@ import { Outlet, Link } from "react-router";
 import Navbar from "../components/Navbar";
 import { useContext, useEffect } from "react";
 import { ThemeContext } from "../context/ThemeContext";
+import { PreferencesContext } from "../context/PreferencesContext";
 
 
 const MainLayout = () => {
-  const { theme } = useContext(ThemeContext)
+  const { theme } = useContext(ThemeContext);
+  const { userName } = useContext(PreferencesContext);
 
   useEffect(() => {
     document.body.className = theme
@@ -22,6 +24,11 @@ const MainLayout = () => {
         <Link to="/history">Histórico</Link>
         <Link to="/settings">Configurações</Link>
       </Navbar>
+      {userName && (
+        <div className="summary-greeting">
+          <p>Olá, {userName}! Vamos a contas?</p>
+        </div>
+      )}
       <main>
         <Outlet />
       </main>
