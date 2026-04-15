@@ -18,39 +18,45 @@ function Settings() {
         <h1>Configurações</h1>
       </header>
       <main>
-        <div className="card">
-          <h2>Nome de utilizador</h2>
-          <input
-            className="settings-input"
-            type="text"
-            value={userName}
-            onChange={(e) => setUserName(e.target.value)}
-            placeholder="Escreve o teu nome!"
-          />
-          <h2>Moeda preferida</h2>
-          <select
-            className="settings-select"
-            value={currency}
-            onChange={(e) => setCurrency(e.target.value)}
-          >
-            {CURRENCIES.map((c) => (
-              <option key={c.code} value={c.code}>
-                {c.label}
-              </option>
-            ))}
-          </select>
-          <h2>Tema</h2>
-          <div className="toggle-wrapper">
-            <span>☀️</span>
-            <label className="toggle-switch">
-              <input
-                type="checkbox"
-                checked={theme === "escuro"}
-                onChange={toggleTheme}
-              />
-              <span className="toggle-slider" />
-            </label>
-            <span>🌙</span>
+        <div className="settings-container">
+          <div className="card">
+            <h2>Nome de utilizador</h2>
+            <input
+              className="settings-input"
+              type="text"
+              value={userName}
+              onChange={(e) => setUserName(e.target.value)}
+              placeholder="Escreve o teu nome!"
+            />
+          </div>
+          <div className="card">
+            <h2>Moeda preferida</h2>
+            <select
+              className="settings-select"
+              value={currency}
+              onChange={(e) => setCurrency(e.target.value)}
+            >
+              {CURRENCIES.map((c) => (
+                <option key={c.code} value={c.code}>
+                  {c.label}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="card">
+            <h2>Tema</h2>
+            <div className="toggle-wrapper">
+              <span>☀️</span>
+              <label className="toggle-switch">
+                <input
+                  type="checkbox"
+                  checked={theme === "escuro"}
+                  onChange={toggleTheme}
+                />
+                <span className="toggle-slider" />
+              </label>
+              <span>🌙</span>
+            </div>
           </div>
         </div>
       </main>
