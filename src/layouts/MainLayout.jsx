@@ -7,7 +7,7 @@ import { PreferencesContext } from "../context/PreferencesContext";
 
 
 const MainLayout = () => {
-  const { theme } = useContext(ThemeContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
   const { userName } = useContext(PreferencesContext);
 
   useEffect(() => {
@@ -17,6 +17,17 @@ const MainLayout = () => {
 
   return (
     <div className='app'>
+      <label className="theme-toggle">
+        <input
+          type="checkbox"
+          checked={theme === 'escuro'}
+          onChange={toggleTheme}
+        />
+        <span className="theme-toggle-track">
+          <img className="theme-toggle-sun" src="/sun.svg" alt="Modo claro" />
+          <img className="theme-toggle-moon" src="/moon.svg" alt="Modo escuro" />
+        </span>
+      </label>
       <Navbar>
         <Link to="/">Home</Link>
         <Link to="/dashboard">Dashboard</Link>

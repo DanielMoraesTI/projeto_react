@@ -46,7 +46,7 @@ function Settings() {
           <div className="card">
             <h2>Tema (Claro/Escuro)</h2>
             <div className="toggle-wrapper">
-              <span>☀️</span>
+              <img className="toggle-icon" src="/sun.svg" alt="Modo claro" />
               <label className="toggle-switch">
                 <input
                   type="checkbox"
@@ -55,7 +55,7 @@ function Settings() {
                 />
                 <span className="toggle-slider" />
               </label>
-              <span>🌙</span>
+              <img className="toggle-icon" src="/moon.svg" alt="Modo escuro" />
             </div>
           </div>
         </div>

@@ -824,6 +824,91 @@ input[type="number"] {
   gap: 8px;
 }
 
+/* THEME TOGGLE */
+.theme-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 100;
+  display: inline-block;
+  width: 68px;
+  height: 34px;
+  cursor: pointer;
+}
+
+.theme-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.theme-toggle-track {
+  position: absolute;
+  inset: 0;
+  border-radius: 34px;
+  background: var(--bg-panel-soft);
+  border: 1px solid #3a3d45;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+/* knob */
+.theme-toggle-track::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  left: 4px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  z-index: 0;
+}
+
+.theme-toggle input:checked + .theme-toggle-track::before {
+  transform: translateX(34px);
+}
+
+.toggle-icon {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) saturate(100%) invert(62%) sepia(100%) saturate(600%) hue-rotate(5deg) brightness(88%);
+}
+
+.theme-toggle-sun,
+.theme-toggle-moon {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  z-index: 1;
+  transition: opacity 0.25s;
+  filter: brightness(0) saturate(100%) invert(62%) sepia(100%) saturate(600%) hue-rotate(5deg) brightness(88%);
+}
+
+body.claro .theme-toggle-track {
+  background: #e5e7eb;
+  border-color: #d1d5db;
+}
+
+body.claro .theme-toggle-track::before {
+  background: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* ativo = opaco, inativo = essbatido */
+.theme-toggle input:not(:checked) + .theme-toggle-track .theme-toggle-moon {
+  opacity: 0.3;
+}
+
+.theme-toggle input:checked + .theme-toggle-track .theme-toggle-sun {
+  opacity: 0.3;
+}
+
 /* RESPONSIVO */
 @media (max-width: 600px) {
   .navbar {
