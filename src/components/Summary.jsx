@@ -14,12 +14,16 @@ export function Summary({ balance, income, expense, typeFilter, onTypeFilter }) 
   return (
     <>
       <div className="summary">
-        <div className="card summary-main-card">
+        <button
+          type="button"
+          className={`card summary-main-card summary-filter-btn${!typeFilter ? " active" : ""}`}
+          onClick={() => onTypeFilter?.(null)}
+        >
           <h3>Saldo Atual</h3>
           <p className={balance >= 0 ? "positive" : "negative"}>
             {format(balance)}
           </p>
-        </div>
+        </button>
 
         <div className="summary-secondary-cards">
           <button

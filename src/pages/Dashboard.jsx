@@ -90,7 +90,7 @@ function Dashboard() {
           income={income}
           expense={expense}
           typeFilter={typeFilter}
-          onTypeFilter={(type) => setTypeFilter((prev) => (prev === type ? null : type))}
+          onTypeFilter={(type) => setTypeFilter(type === null ? null : (prev) => (prev === type ? null : type))}
         />
 
         <div className="dashboard-recent-header">
