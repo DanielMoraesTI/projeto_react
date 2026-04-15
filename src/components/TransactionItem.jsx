@@ -37,9 +37,11 @@ export function TransactionItem({ transaction, categories = [], onDelete }) {
         <span className={isIncome ? "positive" : "negative"}>
           {isIncome ? "+" : "-"}€{displayAmount.toFixed(2)}
         </span>
-        <button className="delete-btn" onClick={() => onDelete(transaction.id)}>
-          &times;
-        </button>
+        {onDelete && (
+          <button className="delete-btn" onClick={() => onDelete(transaction.id)}>
+            &times;
+          </button>
+        )}
       </div>
     </div>
   );

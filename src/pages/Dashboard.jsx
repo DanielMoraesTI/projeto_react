@@ -1,53 +1,15 @@
 import { useQuery } from "@tanstack/react-query";
-import { useReducer } from "react";
+import { useContext } from "react";
 import { Link } from "react-router";
 import { getTransactions, getCategories } from "../api";
 import { Summary } from "../components/Summary";
 import { TransactionList } from "../components/TransactionList";
 import DateRangePicker from "../components/DateRangePicker";
 import CategoryFilter from "../components/CategoryFilter";
-
-function startOfMonth() {
-  const now = new Date();
-  return new Date(now.getFullYear(), now.getMonth(), 1)
-    .toISOString()
-    .split("T")[0];
-}
-
-function today() {
-  return new Date().toISOString().split("T")[0];
-}
-
-const initialState = {
-  startDate: startOfMonth(),
-  endDate: today(),
-  activeCategories: [],
-};
-
-function filtersReducer(state, action) {
-  switch (action.type) {
-    case "SET_DATE_RANGE":
-      return { ...state, startDate: action.start, endDate: action.end };
-    case "TOGGLE_CATEGORY": {
-      const isSelected = state.activeCategories.includes(action.category);
-      return {
-        ...state,
-        activeCategories: isSelected
-          ? state.activeCategories.filter((slug) => slug !== action.category)
-          : [...state.activeCategories, action.category],
-      };
-    }
-    case "CLEAR_CATEGORIES":
-      return { ...state, activeCategories: [] };
-    case "RESET":
-      return initialState;
-    default:
-      return state;
-  }
-}
+import { PreferencesContext } from "../context/PreferencesContext";
 
 function Dashboard() {
-  const [filters, dispatch] = useReducer(filtersReducer, initialState);
+  const { filters, dispatchFilters: dispatch } = useContext(PreferencesContext);
 
   const {
     data: allTransactions = [],
@@ -134,7 +96,6 @@ function Dashboard() {
         <TransactionList
           transactions={transactions.slice(0, 10)}
           categories={categories}
-          onDelete={() => {}}
         />
 
         <button

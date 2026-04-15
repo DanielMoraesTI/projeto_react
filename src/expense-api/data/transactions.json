@@ -8,6 +8,24 @@
       "type": "expense",
       "date": "2026-04-08",
       "createdAt": "2026-04-08T22:14:52.352Z"
+    },
+    {
+      "id": "33dfc6f0-fac1-44c9-bf21-172d1c981937",
+      "description": "dsasda",
+      "amount": -23,
+      "category": "alimentacao",
+      "type": "expense",
+      "date": "2026-04-15",
+      "createdAt": "2026-04-15T15:13:11.085Z"
+    },
+    {
+      "id": "486e697f-9793-4de8-af0f-937c8d74e2c1",
+      "description": "adssad",
+      "amount": -1000,
+      "category": "alimentacao",
+      "type": "expense",
+      "date": "2026-04-15",
+      "createdAt": "2026-04-15T15:18:42.304Z"
     }
   ]
 }
