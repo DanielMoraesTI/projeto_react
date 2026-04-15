@@ -44,7 +44,7 @@ function Settings() {
             </select>
           </div>
           <div className="card">
-            <h2>Tema</h2>
+            <h2>Tema (Claro/Escuro)</h2>
             <div className="toggle-wrapper">
               <span>☀️</span>
               <label className="toggle-switch">

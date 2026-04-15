@@ -291,6 +291,7 @@ main {
   gap: 9px;
   text-align: center;
   text-decoration: none;
+  white-space: nowrap;
   color: var(--text-muted);
   font-weight: 600;
   font-size: 0.95rem;
