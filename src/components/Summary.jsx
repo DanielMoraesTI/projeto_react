@@ -7,32 +7,34 @@ export function Summary({ balance, income, expense }) {
   const { currency, userName } = useContext(PreferencesContext);
 
   const format = (value) =>
-    new Intl.NumberFormat("pt-PT", { style: "currency", currency }).format(value);
+    new Intl.NumberFormat("pt-PT", { style: "currency", currency }).format(
+      value,
+    );
 
   return (
     <>
-      {userName && <p>Olá, {userName}!</p>}
+      {userName && <div className="summary-greeting"><p>Olá, {userName}! Vamos a contas?</p></div>}
 
       <div className="summary">
-      <div className="card summary-main-card">
-        <h3>Saldo Atual</h3>
-        <p className={balance >= 0 ? "positive" : "negative"}>
-          {format(balance)}
-        </p>
-      </div>
-
-      <div className="summary-secondary-cards">
-        <div className="card">
-          <h3>Total de Receitas</h3>
-          <p className="positive">{format(income)}</p>
+        <div className="card summary-main-card">
+          <h3>Saldo Atual</h3>
+          <p className={balance >= 0 ? "positive" : "negative"}>
+            {format(balance)}
+          </p>
         </div>
 
-        <div className="card">
-          <h3>Total de Despesas</h3>
-          <p className="negative">{format(expense)}</p>
+        <div className="summary-secondary-cards">
+          <div className="card">
+            <h3>Total de Receitas</h3>
+            <p className="positive">{format(income)}</p>
+          </div>
+
+          <div className="card">
+            <h3>Total de Despesas</h3>
+            <p className="negative">{format(expense)}</p>
+          </div>
         </div>
       </div>
-    </div>
     </>
   );
 }
