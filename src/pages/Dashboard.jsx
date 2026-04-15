@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router";
 import { getTransactions, getCategories } from "../api";
 import { Summary } from "../components/Summary";
@@ -10,6 +10,7 @@ import { PreferencesContext } from "../context/PreferencesContext";
 
 function Dashboard() {
   const { filters, dispatchFilters: dispatch } = useContext(PreferencesContext);
+  const [typeFilter, setTypeFilter] = useState(null);
 
   const {
     data: allTransactions = [],
@@ -84,7 +85,13 @@ function Dashboard() {
           onClearCategories={() => dispatch({ type: "CLEAR_CATEGORIES" })}
         />
 
-        <Summary balance={balance} income={income} expense={expense} />
+        <Summary
+          balance={balance}
+          income={income}
+          expense={expense}
+          typeFilter={typeFilter}
+          onTypeFilter={(type) => setTypeFilter((prev) => (prev === type ? null : type))}
+        />
 
         <div className="dashboard-recent-header">
           <h2>Transações Recentes</h2>
@@ -94,14 +101,22 @@ function Dashboard() {
         </div>
 
         <TransactionList
-          transactions={transactions.slice(0, 10)}
+          transactions={transactions
+            .filter((t) =>
+              typeFilter === "income"
+                ? t.amount > 0
+                : typeFilter === "expense"
+                ? t.amount < 0
+                : true
+            )
+            .slice(0, 10)}
           categories={categories}
         />
 
         <button
           type="button"
           className="dashboard-reset-btn"
-          onClick={() => dispatch({ type: "RESET" })}
+          onClick={() => { dispatch({ type: "RESET" }); setTypeFilter(null); }}
         >
           Limpar filtros
         </button>

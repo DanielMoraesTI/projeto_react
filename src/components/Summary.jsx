@@ -3,7 +3,7 @@ import { PreferencesContext } from "../context/PreferencesContext";
 
 // O componente Summary recebe os valores de balance, income e expense como props. Ele renderiza um resumo financeiro, exibindo o saldo atual, total de receitas e total de despesas. O saldo é formatado com duas casas decimais e a cor do valor é definida como verde para saldos positivos e vermelho para saldos negativos. As receitas e despesas também são formatadas com duas casas decimais e exibidas em cores correspondentes (verde para receitas e vermelho para despesas). O layout é organizado em uma estrutura de cartões para destacar as informações financeiras.
 
-export function Summary({ balance, income, expense }) {
+export function Summary({ balance, income, expense, typeFilter, onTypeFilter }) {
   const { currency, userName } = useContext(PreferencesContext);
 
   const format = (value) =>
@@ -24,15 +24,23 @@ export function Summary({ balance, income, expense }) {
         </div>
 
         <div className="summary-secondary-cards">
-          <div className="card">
+          <button
+            type="button"
+            className={`card summary-filter-btn${typeFilter === "income" ? " active" : ""}`}
+            onClick={() => onTypeFilter?.("income")}
+          >
             <h3>Total de Receitas</h3>
             <p className="positive">{format(income)}</p>
-          </div>
+          </button>
 
-          <div className="card">
+          <button
+            type="button"
+            className={`card summary-filter-btn${typeFilter === "expense" ? " active" : ""}`}
+            onClick={() => onTypeFilter?.("expense")}
+          >
             <h3>Total de Despesas</h3>
             <p className="negative">{format(expense)}</p>
-          </div>
+          </button>
         </div>
       </div>
     </>

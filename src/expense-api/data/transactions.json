@@ -26,6 +26,15 @@
       "type": "expense",
       "date": "2026-04-15",
       "createdAt": "2026-04-15T15:18:42.304Z"
+    },
+    {
+      "id": "6460678c-8fa2-495c-9567-f070f29b81e1",
+      "description": "teasd",
+      "amount": 2000,
+      "category": "alimentacao",
+      "type": "income",
+      "date": "2026-04-15",
+      "createdAt": "2026-04-15T15:30:09.791Z"
     }
   ]
 }
