@@ -488,8 +488,8 @@ body.claro .dashboard-reset-btn:hover {
 
 /* SUMMARY GREETING */
 .summary-greeting {
-  align-self: center;
   width: min(100%, 380px);
+  margin: 0 auto;
   padding: 12px 16px;
   border-radius: 10px;
   border-left: 4px solid #3b82f6;
@@ -497,6 +497,7 @@ body.claro .dashboard-reset-btn:hover {
   color: var(--text-main);
   font-weight: 600;
   font-size: 1rem;
+  text-align: center;
 }
 
 body.claro .summary-greeting {
