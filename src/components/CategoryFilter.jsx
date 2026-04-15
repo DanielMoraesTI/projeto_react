@@ -1,7 +1,11 @@
-function CategoryFilter({ categories, activeCategory, onCategoryChange }) {
+import { API_URL } from "../api";
 
-  const API_URL = 'http://localhost:3001';
-  
+function CategoryFilter({
+  categories,
+  activeCategories = [],
+  onCategoryToggle,
+  onClearCategories,
+}) {
   const getIconSrc = (cat) => {
     if (cat.iconUrl?.startsWith("http")) {
       return cat.iconUrl;
@@ -16,11 +20,10 @@ function CategoryFilter({ categories, activeCategory, onCategoryChange }) {
 
   return (
     <div className="category-filter">
-      {/* Botão "Todas" limpa o filtro */}
       <button
         type="button"
-        className={!activeCategory ? "active" : ""}
-        onClick={() => onCategoryChange(null)}
+        className={activeCategories.length === 0 ? "active" : ""}
+        onClick={onClearCategories}
       >
         Todas
       </button>
@@ -29,8 +32,8 @@ function CategoryFilter({ categories, activeCategory, onCategoryChange }) {
         <button
           type="button"
           key={cat.slug}
-          className={activeCategory === cat.slug ? "active" : ""}
-          onClick={() => onCategoryChange(cat.slug)}
+          className={activeCategories.includes(cat.slug) ? "active" : ""}
+          onClick={() => onCategoryToggle(cat.slug)}
         >
           <img
             className="category-filter-icon"

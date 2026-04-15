@@ -21,15 +21,24 @@ function today() {
 const initialState = {
   startDate: startOfMonth(),
   endDate: today(),
-  activeCategory: null,
+  activeCategories: [],
 };
 
 function filtersReducer(state, action) {
   switch (action.type) {
     case "SET_DATE_RANGE":
       return { ...state, startDate: action.start, endDate: action.end };
-    case "SET_CATEGORY":
-      return { ...state, activeCategory: action.category };
+    case "TOGGLE_CATEGORY": {
+      const isSelected = state.activeCategories.includes(action.category);
+      return {
+        ...state,
+        activeCategories: isSelected
+          ? state.activeCategories.filter((slug) => slug !== action.category)
+          : [...state.activeCategories, action.category],
+      };
+    }
+    case "CLEAR_CATEGORIES":
+      return { ...state, activeCategories: [] };
     case "RESET":
       return initialState;
     default:
@@ -65,7 +74,8 @@ function Dashboard() {
         !filters.startDate || date >= new Date(filters.startDate);
       const beforeEnd = !filters.endDate || date <= new Date(filters.endDate);
       const matchesCategory =
-        !filters.activeCategory || t.category === filters.activeCategory;
+        filters.activeCategories.length === 0 ||
+        filters.activeCategories.includes(t.category);
       return afterStart && beforeEnd && matchesCategory;
     })
     .sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -105,10 +115,11 @@ function Dashboard() {
 
         <CategoryFilter
           categories={categories}
-          activeCategory={filters.activeCategory}
-          onCategoryChange={(category) =>
-            dispatch({ type: "SET_CATEGORY", category })
+          activeCategories={filters.activeCategories}
+          onCategoryToggle={(category) =>
+            dispatch({ type: "TOGGLE_CATEGORY", category })
           }
+          onClearCategories={() => dispatch({ type: "CLEAR_CATEGORIES" })}
         />
 
         <Summary balance={balance} income={income} expense={expense} />
@@ -122,6 +133,7 @@ function Dashboard() {
 
         <TransactionList
           transactions={transactions.slice(0, 10)}
+          categories={categories}
           onDelete={() => {}}
         />
 
