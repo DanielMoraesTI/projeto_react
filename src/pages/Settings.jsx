@@ -9,7 +9,7 @@ const CURRENCIES = [
 ];
 
 function Settings() {
-  const { currency, setCurrency } = useContext(PreferencesContext);
+  const { currency, setCurrency, userName, setUserName } = useContext(PreferencesContext);
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
@@ -19,6 +19,14 @@ function Settings() {
       </header>
       <main>
         <div className="card">
+          <h2>Nome de utilizador</h2>
+          <input
+            className="settings-input"
+            type="text"
+            value={userName}
+            onChange={(e) => setUserName(e.target.value)}
+            placeholder="Escreve o teu nome!"
+          />
           <h2>Moeda preferida</h2>
           <select
             className="settings-select"
