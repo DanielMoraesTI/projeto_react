@@ -294,7 +294,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 9px;
+  gap: 0.4em;
   text-align: center;
   text-decoration: none;
   color: var(--text-muted);
