@@ -775,6 +775,17 @@ input[type="number"] {
   transform: scale(1.06);
 }
 
+body.claro .delete-btn {
+  background: rgba(209, 74, 74, 0.3);
+  border-color: rgba(209, 74, 74, 0.25);
+  color: var(--red);
+}
+
+body.claro .delete-btn:hover {
+  background: var(--red);
+  color: white;
+}
+
 .toggle-switch {
   position: relative;
   display: inline-block;
