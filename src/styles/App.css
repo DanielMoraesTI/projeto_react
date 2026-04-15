@@ -56,11 +56,80 @@ body.claro h3 {
 }
 
 body.claro .card{
-  background:#9c9c9c91 ;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
 }
 
-body.claro .navbar{
-  background:#9c9c9c91 ;
+body.claro .navbar {
+  background: #ffffff;
+  border-color: #e5e7eb;
+}
+
+body.claro .navbar a:hover {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+  color: #111827;
+}
+
+body.claro .navbar a.active {
+  background: #e5e7eb;
+  border-color: #9ca3af;
+  color: #111827;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+body.claro .form,
+body.claro .transaction-list,
+body.claro .date-range-picker,
+body.claro .category-filter {
+  background: #ffffff;
+  border-color: #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+body.claro .form-group input,
+body.claro .form-group select,
+body.claro .date-range-field input {
+  background: #f9fafb;
+  border-color: #d1d5db;
+  color: #111827;
+}
+
+body.claro .form-group label,
+body.claro .date-range-field {
+  color: #111827;
+}
+
+body.claro .category-filter button {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+  color: #374151;
+}
+
+body.claro .category-filter button:hover {
+  background: #e5e7eb;
+  border-color: #9ca3af;
+  color: #111827;
+}
+
+body.claro .form button {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+  color: #111827;
+}
+
+body.claro .form button:hover {
+  background: #e5e7eb;
+  border-color: #9ca3af;
+}
+
+body.claro .transaction-list h2,
+body.claro .transaction-info .description {
+  color: #111827;
+}
+
+body.claro .transaction-item {
+  border-bottom-color: #e5e7eb;
 }
 
 .app-footer {
