@@ -318,6 +318,17 @@ main {
   stroke-linejoin: round;
 }
 
+.navbar-icon img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+  transition: filter 0.2s;
+}
+
+body.claro .navbar-icon img {
+  filter: brightness(0);
+}
+
 .navbar a:hover {
   color: var(--text-main);
   background: #242730;
