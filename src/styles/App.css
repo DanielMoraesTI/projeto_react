@@ -279,20 +279,24 @@ main {
 .navbar ul {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 8px;
+  align-items: stretch;
+}
+
+.navbar li {
+  display: flex;
 }
 
 .navbar a {
   position: relative;
-  display: block;
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 9px;
   text-align: center;
   text-decoration: none;
-  white-space: nowrap;
   color: var(--text-muted);
   font-weight: 600;
   font-size: 0.95rem;
