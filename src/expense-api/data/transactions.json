@@ -8,6 +8,33 @@
       "type": "expense",
       "date": "2026-04-08",
       "createdAt": "2026-04-08T22:14:52.352Z"
+    },
+    {
+      "id": "6a345a94-5f81-462b-90a2-4da97e3cce73",
+      "description": "Pastrami",
+      "amount": -18,
+      "category": "alimentacao",
+      "type": "expense",
+      "date": "2026-04-16",
+      "createdAt": "2026-04-16T08:16:05.198Z"
+    },
+    {
+      "id": "9e640c42-1732-48bd-9bcc-99d3a8b66e62",
+      "description": "Salário Março",
+      "amount": 1250,
+      "category": "salario",
+      "type": "income",
+      "date": "2026-04-10",
+      "createdAt": "2026-04-16T08:16:40.032Z"
+    },
+    {
+      "id": "6a620784-e7b9-475d-9d58-8adeaa43be91",
+      "description": "Freelance",
+      "amount": 170,
+      "category": "outro",
+      "type": "income",
+      "date": "2026-04-13",
+      "createdAt": "2026-04-16T08:17:45.847Z"
     }
   ]
 }
