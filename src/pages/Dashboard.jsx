@@ -62,12 +62,10 @@ function Dashboard() {
   }
 
   return (
-    <section className="app">
+    <>
       <header>
         <h1>Controle Financeiro</h1>
       </header>
-
-      <main>
 
         <Summary
           balance={balance}
@@ -98,8 +96,7 @@ function Dashboard() {
           categories={categories}
         />
 
-      </main>
-    </section>
+    </>
   );
 }
 

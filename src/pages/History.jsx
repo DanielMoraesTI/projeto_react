@@ -67,12 +67,10 @@ function History() {
   }
 
   return (
-    <section className="app">
+    <>
       <header>
         <h1>Histórico</h1>
       </header>
-
-      <main>
         <DateRangePicker
           startDate={filters.startDate}
           endDate={filters.endDate}
@@ -103,8 +101,7 @@ function History() {
         >
           Limpar filtros
         </button>
-      </main>
-    </section>
+    </>
   );
 }
 

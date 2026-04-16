@@ -142,12 +142,10 @@ export function Statistics() {
   }
 
   return (
-    <section className="app">
+    <>
       <header>
         <h1>Estatísticas</h1>
       </header>
-
-      <main>
         <DateRangePicker
           startDate={filters.startDate}
           endDate={filters.endDate}
@@ -201,7 +199,6 @@ export function Statistics() {
         >
           Limpar filtros
         </button>
-      </main>
-    </section>
+    </>
   );
 }
