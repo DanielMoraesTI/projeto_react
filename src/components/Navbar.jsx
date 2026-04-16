@@ -33,6 +33,11 @@ const Navbar = () => {
       icon: <img src="/history.svg" alt="Histórico" aria-hidden="true" />,
     },
     {
+      to: "/statistics",
+      label: "Estatísticas",
+      icon: <img src="/statistics.svg" alt="Estatísticas" aria-hidden="true" />,
+    },
+    {
       to: "/settings",
       label: "Configurações",
       icon: <img src="/settings.svg" alt="Configurações" aria-hidden="true" />,

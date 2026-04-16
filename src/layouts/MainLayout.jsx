@@ -33,6 +33,7 @@ const MainLayout = () => {
         <Link to="/dashboard">Dashboard</Link>
         <Link to="/add-transaction">Adicionar Transação</Link>
         <Link to="/history">Histórico</Link>
+        <Link to="/statistics">Estatísticas</Link>
         <Link to="/settings">Configurações</Link>
       </Navbar>
       {userName && (

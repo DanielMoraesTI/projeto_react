@@ -35,6 +35,24 @@
       "type": "income",
       "date": "2026-04-13",
       "createdAt": "2026-04-16T08:17:45.847Z"
+    },
+    {
+      "id": "acc93a01-b3c5-425c-b4be-6f6ac12a7cff",
+      "description": "Vinho",
+      "amount": -25,
+      "category": "saude",
+      "type": "expense",
+      "date": "2026-04-16",
+      "createdAt": "2026-04-16T20:06:41.097Z"
+    },
+    {
+      "id": "6eb48115-235a-4870-ac85-923a577f8d42",
+      "description": "Ipad",
+      "amount": -700,
+      "category": "tecnologia",
+      "type": "expense",
+      "date": "2025-04-16",
+      "createdAt": "2026-04-16T20:35:04.183Z"
     }
   ]
 }
