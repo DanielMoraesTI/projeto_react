@@ -14,12 +14,11 @@ export default function AddTransaction() {
   } = useAddTransactionLogic();
 
   return (
-    <section className="app">
+    <>
       <header>
         <h1>Adicionar Transação</h1>
       </header>
-      <main>
-        <form onSubmit={handleSubmit} className="form">
+      <form onSubmit={handleSubmit} className="form">
           {error && <div className="error-message">{error}</div>}
           {mutation.isError && (
             <div className="error-message">
@@ -107,7 +106,6 @@ export default function AddTransaction() {
             {mutation.isPending ? "A guardar..." : "Adicionar Transação"}
           </button>
         </form>
-      </main>
-    </section>
+    </>
   );
 }

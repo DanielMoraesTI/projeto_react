@@ -13,12 +13,11 @@ function Settings() {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <section className="app">
+    <>
       <header>
         <h1>Configurações</h1>
       </header>
-      <main>
-        <div className="settings-container">
+      <div className="settings-container">
           <div className="card">
             <h2>Nome de utilizador</h2>
             <input
@@ -59,8 +58,7 @@ function Settings() {
             </div>
           </div>
         </div>
-      </main>
-    </section>
+    </>
   );
 }
 
