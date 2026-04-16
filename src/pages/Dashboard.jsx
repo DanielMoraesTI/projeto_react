@@ -101,7 +101,8 @@ function Dashboard() {
         </div>
 
         <TransactionList
-          transactions={transactions
+          transactions={allTransactions
+            .sort((a, b) => new Date(b.date) - new Date(a.date))
             .filter((t) =>
               typeFilter === "income"
                 ? t.amount > 0
