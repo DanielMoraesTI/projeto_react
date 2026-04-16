@@ -68,22 +68,6 @@ function Dashboard() {
       </header>
 
       <main>
-        {/*<DateRangePicker
-          startDate={filters.startDate}
-          endDate={filters.endDate}
-          onDateChange={(start, end) =>
-            dispatch({ type: "SET_DATE_RANGE", start, end })
-          }
-        />
-
-        <CategoryFilter
-          categories={categories}
-          activeCategories={filters.activeCategories}
-          onCategoryToggle={(category) =>
-            dispatch({ type: "TOGGLE_CATEGORY", category })
-          }
-          onClearCategories={() => dispatch({ type: "CLEAR_CATEGORIES" })}
-        />*/}
 
         <Summary
           balance={balance}
@@ -114,13 +98,6 @@ function Dashboard() {
           categories={categories}
         />
 
-        {/*<button
-          type="button"
-          className="dashboard-reset-btn"
-          onClick={() => { dispatch({ type: "RESET" }); setTypeFilter(null); }}
-        >
-          Limpar filtros
-        </button>*/}
       </main>
     </section>
   );
