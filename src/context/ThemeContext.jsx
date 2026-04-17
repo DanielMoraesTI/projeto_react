@@ -1,10 +1,14 @@
 //dark/light mode
-import { createContext, useState } from 'react'
+import { createContext, useState, useEffect } from 'react'
 
 export const ThemeContext = createContext()
 
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState('escuro')
+  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'escuro')
+
+  useEffect(() => {
+    localStorage.setItem('theme', theme)
+  }, [theme])
 
   function toggleTheme() {
     setTheme(prev => prev === 'claro' ? 'escuro' : 'claro')
