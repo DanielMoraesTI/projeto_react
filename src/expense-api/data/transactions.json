@@ -10,15 +10,6 @@
       "createdAt": "2026-04-08T22:14:52.352Z"
     },
     {
-      "id": "6a345a94-5f81-462b-90a2-4da97e3cce73",
-      "description": "Pastrami",
-      "amount": -18,
-      "category": "alimentacao",
-      "type": "expense",
-      "date": "2026-04-16",
-      "createdAt": "2026-04-16T08:16:05.198Z"
-    },
-    {
       "id": "9e640c42-1732-48bd-9bcc-99d3a8b66e62",
       "description": "Salário Março",
       "amount": 1250,
@@ -53,6 +44,78 @@
       "type": "expense",
       "date": "2025-04-16",
       "createdAt": "2026-04-16T20:35:04.183Z"
+    },
+    {
+      "id": "70a9c5bf-d114-49e1-a534-4c7e6e6a961b",
+      "description": "Pastrami",
+      "amount": -18,
+      "category": "restaurantes",
+      "type": "expense",
+      "date": "2026-04-16",
+      "createdAt": "2026-04-17T08:47:19.064Z"
+    },
+    {
+      "id": "8673a1e3-eea5-4c15-8594-d14e53bed188",
+      "description": "Reembolso IRS",
+      "amount": 500,
+      "category": "outro",
+      "type": "income",
+      "date": "2026-04-15",
+      "createdAt": "2026-04-17T08:48:19.319Z"
+    },
+    {
+      "id": "1d1daded-d9d0-4321-a6d0-45f00e3e0268",
+      "description": "Lotaria",
+      "amount": 250,
+      "category": "outro",
+      "type": "income",
+      "date": "2026-04-17",
+      "createdAt": "2026-04-17T08:48:44.212Z"
+    },
+    {
+      "id": "a208641d-17c8-4d7d-a713-50ceed69bad5",
+      "description": "Herança",
+      "amount": 1000,
+      "category": "outro",
+      "type": "income",
+      "date": "2026-03-02",
+      "createdAt": "2026-04-17T08:49:13.040Z"
+    },
+    {
+      "id": "cb199d7d-9d96-4239-9a45-97ec638183eb",
+      "description": "Viagem Tailândia",
+      "amount": -2500,
+      "category": "viagens",
+      "type": "expense",
+      "date": "2026-04-17",
+      "createdAt": "2026-04-17T08:49:33.956Z"
+    },
+    {
+      "id": "d2adef93-43af-4d96-8ea3-38b4ab4e2c70",
+      "description": "Salário Fevereiro",
+      "amount": 1250,
+      "category": "salario",
+      "type": "income",
+      "date": "2026-03-02",
+      "createdAt": "2026-04-17T08:50:20.007Z"
+    },
+    {
+      "id": "8df7f121-12f5-4b2a-8a5b-de9dfdf3e702",
+      "description": "Dividendos Mercedes-Benz",
+      "amount": 200,
+      "category": "outro",
+      "type": "income",
+      "date": "2026-04-09",
+      "createdAt": "2026-04-17T08:51:34.633Z"
+    },
+    {
+      "id": "d7c5c844-e97e-4ba2-83c8-c4784d0dca8a",
+      "description": "Conta Hospital",
+      "amount": -100,
+      "category": "saude",
+      "type": "expense",
+      "date": "2026-02-26",
+      "createdAt": "2026-04-17T08:51:55.984Z"
     }
   ]
 }
